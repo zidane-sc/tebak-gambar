@@ -1,0 +1,148 @@
+.container { 
+    
+}
+
+.tools-section {
+    text-align: center;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+
+.toolbox-group {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+/* .color-picker-container {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+} */
+
+.color-picker-container {
+    text-align: center;
+    display: inline;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (orientation:portrait) {
+    .board-container {
+        width: 80vw;
+        height: 80vw;
+        margin: auto;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .color-button {
+        height: 1.2rem;
+        width: 1.2rem;
+        border: 0;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .board-container {
+        width: 60vh;
+        height: 60vh;
+        margin: auto;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .color-button {
+        height: 2rem;
+        width: 2rem;
+        border: 0;
+    }
+}
+
+
+.color-button-row {
+    display: flex;
+    flex-direction: row;
+}
+
+#color-picker {
+    border: 0;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+}
+
+@-moz-document url-prefix() {
+    #color-picker {
+        padding: 5px;
+    }
+}
+
+button:hover,
+input[type="button"]:hover,
+.line-width-button-content:hover,
+#color-picker:hover {
+    /** Important insures it won't be prevented by a 'transparent' main color*/
+    /* background-color: rgb(200, 200, 200) !important; */
+    outline: auto 1px;
+    outline-color: #000;
+    outline-style: auto;
+    outline-width: 1px;
+}
+
+button:active,
+input[type="button"]:active,
+#color-picker:active {
+    /** Important insures it won't be prevented by a 'transparent' main color*/
+    /* background-color: rgb(200, 200, 200) !important; */
+    outline: auto 1px;
+    outline-color: #000;
+    outline-style: auto;
+    outline-width: 1px;
+}
+
+
+.pencil-sizes-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.custom-check-or-radio {
+    /* Little hack in order to hide the original components of the check/radio button */
+    opacity: 0.0;
+    position: absolute;
+}
+
+.line-width-button + .line-width-button-content {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-width-button-content {
+    background-color: rgb(240, 240, 240)
+}
+
+.line-width-button:checked + .line-width-button-content {
+    background-color: rgb(200, 200, 200)
+}
+
+.dot {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.canvas-button {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0;
+    margin-bottom: 0.5rem;
+}
